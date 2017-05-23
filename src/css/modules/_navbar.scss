@@ -1,0 +1,108 @@
+.navbar {
+		position: absolute;
+		background-color: #FFF;
+		right: 0;
+		// For Mobile Only
+		top: 58px;
+		width: 100%;
+		visibility: collapse;
+		opacity: 0;
+		transform: scale(1.2);
+		transition: all 300ms linear;
+		&--is-visible {
+			visibility: visible;
+			opacity: 1;
+			transform: scale(1);
+		}
+		@include atSmall {
+			background-color: rgba($headerColor, 0.8);
+		}
+		@include atMedium {
+			top: 30px;
+			right: 20px;
+			width: auto;
+			visibility: visible;
+			opacity: 1;
+			transform: scale(1);
+			background-color: transparent;
+		}
+		@include atLarge {
+			right: 11%;
+		}
+
+	li {
+		border-bottom: 1px solid $borderColor;
+		transition: all 300ms linear;
+		position: relative;
+		@include atSmall {
+			border-bottom: 0.1px solid rgba(white, 0.1);
+		}
+		&:first-child {
+			border-top: 1px solid $borderColor;
+			@include atSmall {
+				border-top: none;
+			}
+			@include atMedium {
+				border: none;
+			}
+		}
+		@include atMedium {
+			display: inline;
+			border: none;
+		}
+	}
+
+	li:hover {
+		background-color: $lightBlue;
+		@include atMedium {
+			background-color: transparent;
+		}
+	}
+
+	li:hover a {
+		color: #FFF;
+		margin-left: 10px;
+		transition: all 300ms linear;
+		@include atMedium {
+			margin-left: 0;
+			color: $lightBlue;
+		}
+	}
+
+	li.active a {
+		color: $lightBlue;
+	}
+
+
+	a {
+		display: block;
+		padding: 15px;
+		font-size: 0.7rem;
+		font-weight: 700;
+		text-transform: uppercase;
+		color: $headerColor;
+		transition: all 300ms linear;
+		@include atSmall {
+			padding: 20px;
+			font-size: 0.8rem;
+			color: #FFF;
+			opacity: 0.8;
+		}
+		@include atMedium {
+			display: inline-block;
+			padding: 25px;
+			font-size: 0.9rem;
+		}
+	}
+}
+
+.expand-navbar {
+	// When scrolled in ipad size, give top margin with header
+	@include atSmall {
+		top: 70px;
+	}
+	@include atMedium {
+		top: 5px;
+		transition: all 300ms linear;
+	}
+}

@@ -1,0 +1,15 @@
+.contact {
+
+	&__input-group {
+		margin: 5px 0;
+		@include atMedium {
+			margin: 20px 0;
+		}
+	}
+}
+
+.left-input .input-control {
+	@include atMedium {
+		margin-bottom: 37px;
+	}
+}

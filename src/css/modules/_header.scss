@@ -1,0 +1,69 @@
+.header {
+	position: relative;
+	width: 100%;
+	height: 60px;
+	background-color: #FFF;
+	position: fixed;
+	z-index: 100;
+	transition: all 300ms linear;
+	@include atSmall {
+		background-color: rgba($headerColor, 0.8);
+		transition: all 300ms linear;
+	}
+	@include atMedium {
+		height: 80px;
+		background-color: transparent;
+	}
+
+	&__logo {
+		position: absolute;
+		left: 20px;
+		top: 13px;
+		width: 120px;
+		// For Scrolling
+		@include atSmall {
+			left: 30px;
+			transform: scale(1.1);
+			transition: all 300ms linear;
+		}
+		@include atMedium {
+			left: 70px;
+			top: 45px;
+			width: 150px;
+		}
+		@include atLarge {
+			top: 40px;
+			left: 13.5%;
+		}
+		// Company name for SEO and hidden for display
+		h1 {
+			font-size: 0.1rem;
+			z-index: -1000;
+			opacity: 0;
+			position: absolute;
+		}
+	}
+}
+
+// When scrolled down, header(1) and Logo(2) will be expanded;
+.expanded {
+	@include atSmall {
+		background-color: rgba($headerColor, 0.9);
+		height: 70px;
+		transition: all 300ms linear;
+	}
+	@include atLarge {
+		height: 80px;
+	}
+}
+
+.expand-logo {
+	@include atSmall {
+		top: 18px;
+		transform: scale(1);
+		transition: all 300ms linear;
+	}
+	@include atLarge {
+		top: 20px;
+	}
+}
