@@ -1,20 +1,21 @@
 
 .row {
-	display: flex;
-	flex-wrap: wrap;
-
+	margin: 0 auto;
+	@include clearfix;
 	&__col-6 {
-		width: 100%;
+		width: auto;
 		@include atMedium {
 			width: 48%;
+			float: left;
 		}
 	}
 
 
 	&__col-4 {
-		width: 100%;
+		width: auto;
 		@include atSmall {
 			width: 47%;
+			float: left;
 		}
 		@include atMedium {
 			width: 33%;
@@ -27,8 +28,9 @@
 
 
 	&__col-3 {
-
+		width: auto;
 		@include atSmall {
+			float: left;
 			width: 47%;
 		}
 		@include atMedium {
@@ -45,20 +47,20 @@
 	display: flex;
 }
 
-.justify-center-space {
-	justify-content: center;
-	@include atMedium {
-		justify-content: space-between;
-	}
-}
-
-.justify-space {
-	justify-content: space-between;
-}
-
-.justify-center {
-	justify-content: center;
-}
+// .justify-center-space {
+// 	justify-content: center;
+// 	@include atMedium {
+// 		justify-content: space-between;
+// 	}
+// }
+//
+// .justify-space {
+// 	justify-content: space-between;
+// }
+//
+// .justify-center {
+// 	justify-content: center;
+// }
 
 // .margin-top-at-large {
 // 	@include atMedium {
