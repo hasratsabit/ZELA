@@ -25,13 +25,13 @@ export const RevealElements = (function() {
 			}
 
 			// Portfolio
-			if(wScroll > $("#testimonials").offset().top - ($(window).height() / 2)){
-					$(".expand").each(function(i) {
-							setTimeout(function() {
-									$(".expand").eq(i).addClass("expand--is-active")
-							}, 250 * (i + 1));
-					})
-			}
+			// if(wScroll > $("#testimonials").offset().top - ($(window).height() / 2)){
+			// 		$(".expand").each(function(i) {
+			// 				setTimeout(function() {
+			// 						$(".expand").eq(i).addClass("expand--is-active")
+			// 				}, 250 * (i + 1));
+			// 		})
+			// }
 
 			// Training
 			if(wScroll > $("#training").offset().top - ($(window).height() / 2)){
