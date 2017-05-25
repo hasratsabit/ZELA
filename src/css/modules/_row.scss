@@ -1,43 +1,40 @@
 
 .row {
-	margin: 0 auto;
-	@include clearfix;
+	display: flex;
+	flex-wrap: wrap;
 	&__col-6 {
-		width: auto;
+		flex-basis: 100%;
 		@include atMedium {
-			width: 48%;
-			float: left;
+			flex-basis: 48%;
 		}
 	}
 
 
 	&__col-4 {
-		width: auto;
 		@include atSmall {
-			width: 47%;
-			float: left;
+			flex-basis: 47%;
 		}
 		@include atMedium {
-			width: 33%;
+			flex-basis: 33%;
 
 		}
 		@include atLarge {
-			width: 30%;
+			flex-basis: 30%;
 		}
 	}
 
 
 	&__col-3 {
-		width: auto;
+		flex-basis: 100%;
 		@include atSmall {
 			float: left;
-			width: 47%;
+			flex-basis: 47%;
 		}
 		@include atMedium {
-			width: 24%;
+			flex-basis: 24%;
 		}
 		@include atLarge {
-			width: 22%;
+			flex-basis: 22%;
 		}
 	}
 }
@@ -47,23 +44,23 @@
 	display: flex;
 }
 
-// .justify-center-space {
-// 	justify-content: center;
-// 	@include atMedium {
-// 		justify-content: space-between;
-// 	}
-// }
-//
-// .justify-space {
-// 	justify-content: space-between;
-// }
-//
-// .justify-center {
-// 	justify-content: center;
-// }
+.justify-center-space {
+	justify-content: center;
+	@include atMedium {
+		justify-content: space-between;
+	}
+}
 
-// .margin-top-at-large {
-// 	@include atMedium {
-// 		margin-top: 20px;
-// 	}
-// }
+.justify-space {
+	justify-content: space-between;
+}
+
+.justify-center {
+	justify-content: center;
+}
+
+.margin-top-at-large {
+	@include atMedium {
+		margin-top: 20px;
+	}
+}
