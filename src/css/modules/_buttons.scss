@@ -13,7 +13,8 @@
 	}
 
 	&--medium {
-		padding: 10px 20px;
+		padding: 10px 15px;
+		font-size: 0.7rem;
 		@include atMedium {
 			padding: 15px 30px;
 			font-size: 1rem;
