@@ -3,6 +3,7 @@
 	padding: 15px;
 	border-left: 5px solid $lightBlue;
 	box-shadow: 0 0 1px #ccc;
+	cursor: pointer;
 	transition: all 0.5s linear;
 	&:hover {
 		background-color: $lightBlue;
@@ -10,8 +11,11 @@
 	}
 
 	&:hover a {
-		background-color: #FFF;
-		color: $lightBlue;
+		color: #FFF;
+		@include atMedium {
+			background-color: #FFF;
+			color: $lightBlue;
+		}
 	}
 	&:hover p {
 		color: #FFF;
